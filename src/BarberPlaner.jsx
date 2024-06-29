@@ -2,7 +2,7 @@ export default function BarberPlaner() {
 
   return (
     <>
-    Hello Vite Vite !!!
+      Hello Vite Vite !!!
     </>
   )
 }
