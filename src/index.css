@@ -1,11 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f1f1f1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,11 +16,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -28,6 +38,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: 100vw;
+  height: 100;
 }
 
 h1 {
@@ -46,9 +58,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,10 +73,321 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.Toastify__toast--error {
+  position: relative !important;
+  right: 1.5rem !important;
+  width: 350px !important;
+}
+
+.Toastify__toast--success {
+  position: relative !important;
+  right: 1.5rem !important;
+  width: 350px !important;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.eye-position {
+  position: absolute;
+  right: 45px;
+  top: 29%;
+}
+
+.fc .fc-toolbar-title {
+  color: rgb(17 24 39)
+}
+
+.fc .fc-button-group button {
+  background-color: #93362e;
+  border-color: #93362e;
+  font-size: 18px;
+}
+
+.fc .fc-button-group button:hover {
+  background-color: #A85E57;
+  border-color: #A85E57;
+}
+
+.fc .fc-toolbar-chunk .fc-today-button {
+  background-color: #A85E57;
+  border-color: #A85E57;
+  font-size: 18px;
+}
+
+.fc .fc-toolbar-chunk .fc-today-button:hover {
+  background-color: #93362e;
+  border-color: #93362e;
+}
+
+.fc .fc-button-group button:disabled {
+  background-color: #A85E57;
+  border-color: #A85E57;
+
+}
+
+.form-size {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 40%;
+  color: #000;
+  padding-top: 0rem;
+  padding-right: 40px;
+}
+
+.planer-size {
+  width: 60%;
+}
+
+.logout-button {
+  background-color: #93362e;
+  width: 140px;
+  height: 43px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.delete-button{
+  background-color: #d11a2a;
+  width: 150px;
+  height: 43px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  background-color: #A85E57;
+}
+
+button:hover {
+  border-color: #A85E57;
+}
+
+.carousel {
+  width: 90%;
+  /* Szerokość karuzeli */
+  height: 100px;
+  /* Wysokość karuzeli */
+  margin: 0 auto;
+  /* Wyśrodkuj karuzelę */
+}
+
+.carousel .react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-multiple-carousel__arrow {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.react-multiple-carousel__arrow:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.react-multiple-carousel__arrow::before {
+  color: #000;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: -1rem;
+  z-index: 0;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: -1rem;
+  z-index: 0;
+}
+
+.react-multi-carousel-track div {
+  border: 2px solid rgb(209 213 219);
+  border-radius: 0.375rem;
+  padding: 6px 10px 6px 10px;
+}
+
+.react-multi-carousel-track div:hover {
+  border: 2px solid #A85E57;
+  cursor: pointer;
+}
+
+.box-ring {
+  outline: 1px solid #93362e;
+  border: 2px solid #93362e !important;
+}
+
+.booking-button {
+  background-color: #93362e;
+  color: #fff;
+  width: 100%;
+  height: 43px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.booking-button:hover {
+  background-color: #A85E57;
+}
+
+input {
+  height: 43px;
+  font-size: 18px;
+}
+
+button {
+  border-radius: 4px;
+  height: 43px;
+  font-size: 18px !important;
+}
+
+#btn-group {
+  width: 100%;
+}
+
+#btn-group button {
+  width: 50%;
+  height: 43px;
+  color: #fff;
+  padding: 0;
+}
+
+#btn-group button:nth-child(1) {
+  border-radius: 4px 0px 0px 4px;
+  border-right: 1px solid rgb(209 213 219);
+}
+
+#btn-group button:nth-child(2) {
+  border-radius: 0px 4px 4px 0px;
+  border-left: 1px solid rgb(209 213 219);
+}
+
+#btn-group2 button:nth-child(1) {
+  border-radius: 4px 0px 0px 4px;
+  border-right: 1px solid rgb(209 213 219);
+}
+
+#btn-group2 button:nth-child(2) {
+  border-radius: 0px 0px 0px 0px;
+  border-left: 1px solid rgb(209 213 219);
+  border-right: 1px solid rgb(209 213 219);
+}
+
+#btn-group2 button:nth-child(3) {
+  border-radius: 0px 4px 4px 0px;
+  border-left: 1px solid rgb(209 213 219);
+}
+
+#btn-group button:hover {
+  background-color: #A85E57;
+}
+
+.normal-button {
+  background-color: #93362e;
+}
+
+.cancel-button {
+  width: 80px;
+  height: 32px;
+  color: #fff;
+  padding: 0;
+  margin-left: 1rem;
+  background-color: #93362e;
+}
+
+.active-button {
+  background-color: #A85E57;
+}
+
+.active {
+  background-color: #bb948f;
+}
+
+table {
+  border-radius: 4px;
+}
+
+.fc-day:active {
+  background-color: #bb948f;
+}
+
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='tel']:hover{
+  border: 1px solid #93362e;
+}
+
+.height{
+  height: 65vh;
+}
+
+.height-2{
+  height: 29vh;
+}
+
+.modal-delete-button{
+  background-color: #d11a2a;
+  height: 43px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.modal-delete-button:hover{
+  background-color: red;
+  border-color: red;
+}
+
+.modal-cancel-button{
+  background-color: #abaeb3;
+  height: 43px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.modal-cancel-button:hover{
+  border-color: rgb(209 213 219);
+  background-color: rgb(209 213 219);
+}
+
+.normal-adm-button{
+  width: 33.33%;
+  background-color: #93362e;
+  color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.active-adm-button{
+  width: 33.33%;
+  background-color: #A85E57;
+  color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 1800px) {
+  .height{
+    height: 66.7vh;
+    border: 1px solid #93362e;
   }
 }
